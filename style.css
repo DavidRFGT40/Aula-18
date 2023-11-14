@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #ffffff ;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+h1, h2 {
+    font-weight: 800;
+    color: #ffffff;
+}
+
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+main {
+    display: block;
+    background: #162652 ;
+}
+
+.container{
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 30px;
+    animation: surgir 2s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0 cover 30%;
+
+}
+
+section.modulo p{
+    margin-bottom: 30px;
+    text-align: justify;
+    font-size: 1.3em
+}
+
+section.modulo h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+
+section.modulo.content{
+    padding: 40px 0;
+    background: #162652 ;
+    
+}
+
+section.modulo.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.modulo.parallax h1{
+    color: #fff;
+    text-align: center;
+    font-size: 70px;
+    text-transform: uppercase;
+    text-shadow: 7px 7px 7px #000000e3;
+    z-index: 50;
+}
+
+
+section.modulo.parallax::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;z-index: 8;
+    background: linear-gradient(to bottom, rgba(0,0,0,0)0, rgba(0,0,0,0) 40%, #000000 120%);
+}
+
+
+
+section.modulo.parallax-1{
+ background-image: url(https://e0.pxfuel.com/wallpapers/51/476/desktop-wallpaper-metallica-x-billabong-lab-ride-the-lightning.jpg);
+}
+
+section.modulo.parallax-2{
+background-image: url(https://cdn.pixabay.com/photo/2017/08/01/22/38/flash-2568381_1280.jpg);
+}
+
+section.modulo.parallax-3{
+background-image: url(https://www.planocritico.com/wp-content/uploads/2021/06/Metallica-Ride-The-Lightning.jpg);
+}
+
+@keyframes surgir {
+    from{
+translate: -100vw 0;
+color: #000000;
+opacity: 1;
+    }
+
+    to{
+translate: 0 0;
+color: #fff;
+opacity: 1;
+    }
+
+}
+
+
+@media all and (max-width: 860px) {
+    section.modulo p{
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 1em;
+    }
+
+    section.modulo.parallax h1{
+        color: #fff;
+        text-align: center;
+        font-size: 3em;
+        text-transform: uppercase;
+        text-shadow: 7px 7px 7px #00000097;
+        z-index: 50;
+    }
+
+    section.modulo.content{
+        width: 90%;
+    }
+
+    section.modulo.parallax-1 {
+        background-image: url(https://i.pinimg.com/736x/c0/2d/d3/c02dd33a823acb549367d8f23decc7b7.jpg);
+       }
+
+       .galeria{
+        width: 100%;
+       }
+        
+
+}
+
+
+.galeria{
+    margin: 1em;
+    display: flex;
+    height: 20em;
+    gap: 0.3em;
+}
+
+.galeria div{
+    flex: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.6s cubic-bezier(0.50, 1, 0.320, 1);
+}
+
+.galeria div:hover{
+    flex: 7;
+
+}
+
+.galeria:hover div:not(:hover){
+    filter: blur(0.1em) grayscale(45%) ;
+    
+}
+
+
+
+
